@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\adminController;
 use App\Http\Controllers\homeController;
 use App\Http\Controllers\loginController;
+use App\Http\Controllers\plaintesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,3 +19,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [loginController::class, 'index'])->name('index');
 Route::get('accueil', [homeController::class, 'index'])->name('home');
+Route::get('admin', [adminController::class, 'index'])->name('dash');
+Route::get('mes_requetes', [plaintesController::class, 'index'])->name('mes-requetes');
+
